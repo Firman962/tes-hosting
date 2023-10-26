@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Slab", serif;
+}
+body {
+  height: 1000px;
+}
+
+.left h1 {
+  color: white;
+  font-size: 1.7rem;
+  cursor: pointer;
+  text-shadow: 2px 2px 2px rgb(77, 74, 74);
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 5rem;
+  background-color: rgb(48, 1, 1);
+  width: 100%;
+  /* position: fixed; */
+}
+.right ul {
+  display: flex;
+  list-style: none;
+}
+.right ul li a {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  text-shadow: 2px 2px 2px rgb(77, 74, 74);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+.right a {
+  border: 2px solid rgb(48, 1, 1);
+  border-radius: 10px;
+  margin: 10px;
+}
+.right a:hover {
+  border-color: white;
+  background-image: radial-gradient(rgb(48, 1, 1), white);
+}
+/* hamburger menu */
+.right #toggle {
+  display: none;
+}
+.toggle-btn i {
+  color: white;
+  cursor: pointer;
+  font-size: 48px;
+  float: right;
+  line-height: 80px;
+  display: none;
+}
+
+/* responsive navbar */
+@media screen and (max-width: 767px) {
+  .list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-color: white;
+    position: fixed;
+    top: 5rem;
+    left: 100%;
+    transition: all 1s;
+  }
+  .toggle-btn i {
+    display: block;
+  }
+
+  #toggle {
+    display: none;
+  }
+  #toggle:checked~ul {
+    left: 0%;
+    background-color: rgb(48, 1, 1);
+    z-index: 100;
+  }
+}
+/* akhir resposnsive navbar */
+
+.jumbotron {
+  background-image: radial-gradient(white, rgb(48, 1, 1));
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+/* animasi paragraf */
+.paragraf p {
+  transform: scale(0.94);
+  animation: scaleP 3s forwards cubic-bezier(0.5, 1, 0.89,1 );
+}
+@keyframes scaleP {
+  100% {
+    transform: scale(1);
+  }
+}
+/* akhir animasi paragraf */
+
+.paragraf p {
+  color:  rgb(48, 1, 1);
+}
+
+/* animasi icon p */
+.icon_1_2 a, .icon_3_4 a {
+  transform: scale(0.80);
+  animation: scaleIcon 3s forwards cubic-bezier(0.5, 1, 0.89,1 );
+}
+@keyframes scaleIcon {
+  100% {
+    transform: scale(1.1);
+  }
+}
+/* akhir animasi icon p */
+
+
+
+/* animasi mengetik */
+.landingPage h2 {
+  font-size: 2.1rem;
+  color: rgb(48, 1, 1);
+  border-right: 5px solid black;
+  overflow: hidden;
+  animation: mengetik 3s steps(14, end), berkedip 1s ease infinite;
+}
+@keyframes mengetik {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes berkedip {
+  from {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+/* akhir animasi */
+
+/* icon sosmed */
+
+.container_icon {
+  margin-top: 1rem;
+}
+.icon_1_2 {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5px;
+}
+
+.icon_3_4 {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5px;
+}
+
+.icon_1_2 a, .icon_3_4 a {
+  font-size: 35px;
+  color:  rgb(48, 1, 1);
+  text-decoration: none;
+}
+
+a p {
+  font-size: 14px;
+  color: white;
+  float: right;
+  margin-top: 14px;
+  margin-left: 10px;
+}
+
+.icon_1_2 a p, .icon_3_4 a p {
+  color: white;
+}
+
+
+.hero-img {
+  cursor: pointer;
+}
+/* akhir icon sosmed */
+
+.btn_cv {
+  margin: 15px 90px;
+  width: 5rem;
+  height: 1.7rem;
+  background-color: rgb(48, 1, 1);
+  color: white;
+  border: 2px solid  rgb(48, 1, 1);
+  border-radius: 10px;
+  cursor: pointer;
+  /* transition: all 0.8s; */
+}
+
+.btn_cv:hover {
+  background-image: radial-gradient(rgb(48, 1, 1), white);
+  border-color: white;
+}
+/* animation button */
+/* .button {
+  transform: scale(0.94);
+  animation: scaleBtn 3s forwards cubic-bezier(0.5, 1, 0.89,1 );
+}
+@keyframes scaleBtn {
+  100% {
+    transform: scale(1.1);
+  }
+} */
+/* akhir animation button */
+
